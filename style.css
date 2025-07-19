@@ -92,6 +92,12 @@
     cursor: pointer;
 }
 
+.btm-sm{
+    font-size: 10px;
+    padding: 7px 13px;
+    margin: 10px 0;
+}
+
 .btn:hover {
     color: black;
     background-color: white;
