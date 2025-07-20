@@ -13,11 +13,23 @@
     height: 100vh;
 }
 
+@media (max-width: 1148px) {
+    * {
+        background-color: whitesmoke;
+    }
+
+    .sidebar {
+        transform: translate(-443px);
+        position: absolute;
+    }
+}
+
 .sidebar {
+    position: absolute;
     background-color: rgb(228, 221, 221);
-    width: 434px;
     height: 100vh;
     font-family: "Libertinus Mono", monospace;
+    transition: transform 0.3s ease-in;
 }
 
 .sidebar nav {
@@ -64,7 +76,9 @@
     width: 90vw;
     font-family: "Michroma", sans-serif;
 }
-
+.blogContainer{
+    margin: 88px;
+}
 
 .blogContainer h1 {
     font-family: "Alumni Sans SC", sans-serif;
@@ -84,3 +98,38 @@
 .blogItem p {
     font-family: "Tektur", sans-serif;
 }
+
+@media (max-width: 1148px) {
+    *{
+         /* background-color: whitesmoke; */
+    }
+        .devpic{
+            display: none;
+        }
+
+    .blogContainer{
+            margin: 50px 8px;
+        } 
+}
+
+.sidebarGo{
+    transform: translate(-443px, 0px);
+    position: absolute;
+}
+
+.hamburger{
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+}
+
+.ham{
+    margin: -2px;
+    margin-left: 10px;
+}
+
+.cross{
+    margin-left: 191px;
+}
+

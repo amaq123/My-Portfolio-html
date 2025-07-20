@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Added for more predictable layout */
 }
 
 .container {
@@ -13,10 +12,11 @@
 }
 
 .sidebar {
+    position: absolute;
     background-color: rgb(228, 221, 221);
-    width: 434px;
     height: 100vh;
     font-family: "Libertinus Mono", monospace;
+    transition: transform 0.3s ease-in;
 }
 
 .sidebar nav {
@@ -59,7 +59,6 @@
 }
 
 .main {
-    /* background-color: yellow; */
     width: 90vw;
     font-family: "Michroma", sans-serif;
 }
@@ -68,11 +67,99 @@ h1 {
     font-family: "Alumni Sans SC", sans-serif;
     margin: 23px;
 }
+.intro{
+    margin: 88px;
+}
 
-h2 {
+.intro h2 {
     font-family: "Michroma", sans-serif;
+    margin: 12px;
 }
 
-p {
+.intro p {
     font-family: "Tektur", sans-serif;
+    margin: 12px;
 }
+
+@media (max-width: 1148px){
+    *{
+        background-color: whitesmoke;
+    }
+    .sidebar{
+        transform: translate(-443px);
+        position: absolute;
+    }
+}
+
+.skillContainer{
+    padding: 12px;
+    font-family: "Alumni Sans SC", sans-serif;
+    margin: 88px;
+}
+
+.skillItem{
+    display: flex;
+    align-items: center;
+    font-family: "Tektur", sans-serif;
+    
+}
+
+.skill{
+    width: 256px;
+    height: 6px;
+    background-color: black;
+    border: 2px solid black;
+    
+    
+}
+
+.expert{
+    width: 256px;
+    background-color: blue;
+
+}
+
+.intermediate{
+    width: 150px;
+    background-color: brown;
+}
+
+.easy{
+    width: 50;
+    background-color: red;
+}
+
+@media (max-width: 1148px) {
+    *{
+         /* background-color: whitesmoke; */
+    }
+        .devpic{
+            display: none;
+        }
+
+    .intro{
+            margin: 50px 8px;
+        }
+}
+
+.sidebarGo{
+    transform: translate(-443px, 0px);
+    position: absolute;
+}
+
+.hamburger{
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+}
+
+.ham{
+    margin: -2px;
+    margin-left: 10px;
+}
+
+.cross{
+    margin-left: 191px;
+}
+
