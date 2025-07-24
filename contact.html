@@ -15,10 +15,10 @@
             <nav>
                 <ul>
                     <li><a href="/index.html">Home</a></li>
-                    <li><a href="/service.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="/blog.html">Blog</a></li>
                     <li><a href="/contact.html">Contact Me</a></li>
+                    <li><a href="/Projects.html">Projects</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,27 +29,28 @@
             </div>
             <div class="contactform">
                 <h1>Contact Me For Any Kind Of Work / Query</h1>
-                <form>
+                <form action="#" method="post">
                     <div class="mb-3">
-                        <label for="clientemail" class="form-label">Name</label>
-                        <input type="email" class="form-control" id="clientemail" aria-describedby="emailHelp">
+                        <label for="clientname" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="clientname" name="clientname" required>
                     </div>
                     <div class="mb-3">
                         <label for="clientemail" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="clientemail" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="clientemail" name="clientemail" required>
                     </div>
                     <div class="mb-3">
                         <label for="clientphone" class="form-label">Phone Number</label>
-                        <input type="phone" class="form-control" id="clientphone">
+                        <input type="tel" class="form-control" id="clientphone" name="clientphone">
                         <div id="emailHelp" class="form-text">We'll never share your email & phone with anyone else.
                         </div>
                     </div>
-                    <div class="mb-3  " id="form-check">
-                        <input type="checkbox" class="form-check-input" id="isclient">
+                    <div class="mb-3" id="form-check">
+                        <input type="checkbox" class="form-check-input" id="isclient" name="isclient">
                         <label class="form-check-label" for="isclient">I want you to work on a project with me</label>
                     </div>
-                    <div class="buttons"></div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="buttons">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </form>
             </div>
         </div>
