@@ -1,18 +1,25 @@
-console.log("Script...")
+window.onload = () => {
+    console.log("Script Loaded...");
 
-document.querySelector('.cross').style.display = 'none';
+    const sidebar = document.querySelector('.sidebar');
+    const hamburger = document.querySelector('.hamburger');
+    const hamIcon = document.querySelector('.ham');
+    const crossIcon = document.querySelector('.cross');
 
-document.querySelector('.hamburger').addEventListener("click", () => {
-    document.querySelector('.sidebar').classList.toggle('sidebarGo');
+    crossIcon.style.display = 'none';
 
-    if (document.querySelector('.sidebar').classList.contains('sidebarGo')) {
-        document.querySelector('.ham').style.display = 'inline';
-        document.querySelector('.cross').style.display = 'none';
-    } else {
-        document.querySelector('.cross').style.display = 'inline';
-        setTimeout(() =>{
-            document.querySelector('.ham').style.display = 'none';
-        }, 300);
-        
-    }
-});
+    hamburger.addEventListener("click", () => {
+        console.log("Hamburger clicked");
+        sidebar.classList.toggle('sidebarGo');
+
+        if (sidebar.classList.contains('sidebarGo')) {
+            hamIcon.style.display = 'inline';
+            crossIcon.style.display = 'none';
+        } else {
+            crossIcon.style.display = 'inline';
+            setTimeout(() => {
+                hamIcon.style.display = 'none';
+            }, 300);
+        }
+    });
+};
