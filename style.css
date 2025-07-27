@@ -365,7 +365,7 @@ html {
 }
 
 .contactform .btn-primary {
-    background-color: #3498db;
+    background-color: rgb(41, 39, 39);
     color: white;
     border: none;
     padding: 0.75rem 2rem;
@@ -376,7 +376,8 @@ html {
 }
 
 .contactform .btn-primary:hover {
-    background-color: #2980b9;
+    color: black;
+    background-color: white;;
 }
 
 /* blog.css additions */
