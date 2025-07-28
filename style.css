@@ -1,4 +1,4 @@
-/* style.css */
+/* === Global Styles === */
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Michroma&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Michroma&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Tektur:wght@400..900&display=swap');
@@ -6,139 +6,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Libertinus+Mono&family=Luckiest+Guy&family=Michroma&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Tektur:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Libertinus+Mono&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Luckiest+Guy&family=Michroma&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Tektur:wght@400..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* ==== Responsive Enhancements ==== */
-
-/* General font scaling for mobile */
-@media (max-width: 768px) {
-    html {
-        font-size: 55%;
-    }
-
-    .main {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .infocontainer {
-        flex-direction: column;
-        align-items: center;
-        margin: 80px auto;
-        text-align: center;
-    }
-
-    .devinfo {
-        align-items: center;
-        font-size: 1.4rem;
-    }
-
-    .hello,
-    .name,
-    .about {
-        font-size: 2.5rem;
-    }
-
-    .moreabout {
-        font-size: 1.3rem;
-        padding: 0 1rem;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .btm-sm {
-        font-size: 1.2rem;
-    }
-
-    .devpic img {
-        display: none;
-    }
-
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        transform: translateX(-100%);
-        width: 220px;
-        height: 100vh;
-        z-index: 1000;
-    }
-
-    .sidebarGo {
-        transform: translateX(0);
-    }
-
-    .hamburger {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 1100;
-    }
-
-    .cross {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-}
-
-/* Super small screens (phones under 480px) */
-@media (max-width: 480px) {
-    .contactform,
-    .blogContainer,
-    article {
-        margin: 20px 10px;
-        padding: 15px 10px;
-    }
-
-    .contactform h1,
-    .blogContainer h1 {
-        font-size: 1.5rem;
-    }
-
-    .contactform input,
-    .contactform textarea {
-        font-size: 0.9rem;
-    }
-
-    .btn,
-    .btn-primary,
-    .back-btn {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-
-    .about {
-        font-size: 2rem;
-    }
-
-    .sidebar nav li {
-        font-size: 18px;
-        padding: 20px 0;
-    }
-
-    .blogItem h2 {
-        font-size: 1.5rem;
-    }
-
-    .blogItem p {
-        font-size: 1.2rem;
-    }
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* Added for more predictable layout */
 }
+
 html {
-  font-size: 62.5%; /* 1rem = 10px */
-  scroll-behavior: smooth;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    scroll-behavior: smooth;
 }
 
-
+/* === Index Page Styles === */
 .sidebar {
     position: absolute;
     background-color: rgb(228, 221, 221);
@@ -149,7 +30,6 @@ html {
 
 .sidebar nav {
     padding: 45px;
-
 }
 
 .sidebar nav li {
@@ -161,6 +41,11 @@ html {
 .sidebar nav li a {
     text-decoration: none;
     color: black;
+}
+
+.sidebarGo {
+    transform: translate(-443px, 0px);
+    position: absolute;
 }
 
 .sidebarGo+.main {
@@ -176,29 +61,10 @@ html {
     font-family: "Michroma", sans-serif;
 }
 
-
-.btn {
-    margin-top: 34px;
-    padding: 9px 14px;
-    border-radius: 22px;
-    color: white;
-    background-color: rgb(41, 39, 39);
-    font-weight: bold;
-    width: 0 3px;
-    cursor: pointer;
-    margin: -1px;
-}
-
-.btn:hover {
-    color: black;
-    background-color: white;
-}
-
 .container {
     display: flex;
     height: 100vh;
 }
-
 
 .infocontainer {
     height: 57vh;
@@ -241,6 +107,23 @@ html {
     font-size: 5px;
 }
 
+.btn {
+    margin-top: 34px;
+    padding: 9px 14px;
+    border-radius: 22px;
+    color: white;
+    background-color: rgb(41, 39, 39);
+    font-weight: bold;
+    width: 0 3px;
+    cursor: pointer;
+    margin: -1px;
+}
+
+.btn:hover {
+    color: black;
+    background-color: white;
+}
+
 .btm-sm {
     font-size: 10px;
     padding: 7px 13px;
@@ -249,29 +132,6 @@ html {
 
 .devpic img {
     height: 57vh;
-}
-
-@media (max-width: 1148px) {
-    * {
-        /* background-color: whitesmoke; */
-    }
-
-    .buttons {
-        font-size: 10px;
-    }
-
-    .devinfo {
-        font-size: 10px;
-    }
-
-    .devpic {
-        display: none;
-    }
-}
-
-.sidebarGo {
-    transform: translate(-443px, 0px);
-    position: absolute;
 }
 
 .hamburger {
@@ -290,9 +150,314 @@ html {
     margin-left: 191px;
 }
 
-/* contact.css additions */
-/* ========== Contact Form Styling ========== */
+/* === About Section Styles === */
+.intro {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeInUp 0.9s ease forwards;
+}
 
+.section-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.about-list {
+    padding-left: 1.2rem;
+    list-style-type: none;
+}
+
+.about-list li {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.about-list li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1rem;
+    color: #27ae60;
+}
+
+.skillContainer {
+    margin-top: 2rem;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.skillItem {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.skill {
+    height: 22px;
+    border-radius: 10px;
+    margin-top: 8px;
+    background-color: #ddd;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill::after {
+    content: attr(data-label);
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+}
+
+.easy::before,
+.intermediate::before,
+.expert::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-radius: 10px;
+    animation: fillBar 1.2s ease-in-out forwards;
+}
+
+.easy {
+    --width: 50%;
+}
+
+.intermediate {
+    --width: 75%;
+}
+
+.expert {
+    --width: 95%;
+}
+
+.easy::before {
+    width: var(--width);
+    background: linear-gradient(90deg, #81c784, #66bb6a);
+}
+
+.intermediate::before {
+    width: var(--width);
+    background: linear-gradient(90deg, #64b5f6, #42a5f5);
+}
+
+.expert::before {
+    width: var(--width);
+    background: linear-gradient(90deg, #ff8a65, #ff7043);
+}
+
+@keyframes fillBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--width);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Blog Section Styles === */
+.blogContainer {
+    margin: 88px;
+}
+
+.blogContainer h1 {
+    font-family: "Alumni Sans SC", sans-serif;
+    margin: 23px;
+    margin-left: 60rem;
+    font-size: 30px;
+}
+
+.blogItem {
+    margin: 20px;
+    margin-top: 2rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.btn-sm{
+    margin-top: 20px;
+}
+
+.blogItem h2 {
+    font-family: "Michroma", sans-serif;
+    font-size: 20px;
+}
+
+.blogItem p {
+    font-family: "Tektur", sans-serif;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+article {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+article h1 {
+    font-family: 'Tektur', sans-serif;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+article p {
+    line-height: 3;
+    color: #333333;
+}
+
+article li {
+    line-height: 2;
+}
+
+.back-btn {
+    margin-top: 34px;
+    padding: 9px 14px;
+    border-radius: 22px;
+    color: white;
+    background-color: rgb(41, 39, 39);
+    font-weight: bold;
+    width: 0 3px;
+    cursor: pointer;
+    margin: -1px;
+    border-color: black;
+}
+
+a.back-btn {
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid #1e272e;
+}
+
+/* === Project Section Styles === */
+.project {
+    padding: 1rem 2rem;
+}
+
+.project h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-right: 103rem;
+    color: #333;
+    font-family: 'Michroma', sans-serif;
+}
+
+.topbar h1 {
+    margin-left: 75rem;
+    font-size: 40px;
+}
+
+.project-buttons {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+}
+
+.project-buttons button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.videoContainer h1 {
+    margin-left: 10rem;
+    font-size: 30px;
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.video-grid {
+    margin-top: 5rem;
+}
+
+#shortVideos h1 {
+    margin-left: 15rem;
+}
+
+iframe.long-video {
+    width: 560px;
+    height: 315px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+iframe.short-video {
+    width: 300px;
+    height: 533px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === Contact Section Styles === */
 .contactform {
     max-width: 600px;
     margin: 4rem auto;
@@ -377,99 +542,175 @@ html {
 
 .contactform .btn-primary:hover {
     color: black;
-    background-color: white;;
+    background-color: white;
 }
 
-/* blog.css additions */
-.blogContainer {
-    margin: 88px;
-}
-
-.blogContainer h1 {
-    font-family: "Alumni Sans SC", sans-serif;
-    margin: 23px;
-}
-
-.blogItem {
-    margin: 20px;
-    font-family: 'Fira Sans', sans-serif;
-}
-
-.blogItem h2 {
-    font-family: "Michroma", sans-serif;
-}
-
-.blogItem p {
-    font-family: "Tektur", sans-serif;
-}
-
+/* === Responsive Enhancements === */
+/* For screens up to 1148px */
 @media (max-width: 1148px) {
+    * {
+        /* background-color: whitesmoke; */
+    }
+
+    .buttons {
+        font-size: 10px;
+    }
+
+    .devinfo {
+        font-size: 10px;
+    }
+
+    .devpic {
+        display: none;
+    }
+
     .blogContainer {
         margin: 50px 8px;
     }
 }
 
+/* For screens up to 768px */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
 
-article {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .infocontainer {
+        flex-direction: column;
+        align-items: center;
+        margin: 80px auto;
+        text-align: center;
+    }
+
+    .devinfo {
+        align-items: center;
+        font-size: 1.4rem;
+    }
+
+    .hello,
+    .name,
+    .about {
+        font-size: 2.5rem;
+    }
+
+    .moreabout {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btm-sm {
+        font-size: 1.2rem;
+    }
+
+    .devpic img {
+        display: none;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 220px;
+        height: 100vh;
+        z-index: 1000;
+    }
+
+    .sidebarGo {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1100;
+    }
+
+    .cross {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    iframe.long-video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    iframe.short-video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 9 / 16;
+    }
+
+    .project h1 {
+        font-size: 1.75rem;
+    }
+
+    .project-buttons button {
+        margin: 10px 5px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
 }
 
-article h1 {
-    font-family: 'Tektur', sans-serif;
-    color: #2c3e50;
-    margin-bottom: 20px;
+/* For super small screens (phones under 480px) */
+@media (max-width: 480px) {
+    .contactform,
+    .blogContainer,
+    article {
+        margin: 20px 10px;
+        padding: 15px 10px;
+    }
+
+    .contactform h1,
+    .blogContainer h1 {
+        font-size: 1.5rem;
+    }
+
+    .contactform input,
+    .contactform textarea {
+        font-size: 0.9rem;
+    }
+
+    .btn,
+    .btn-primary,
+    .back-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .about {
+        font-size: 2rem;
+    }
+
+    .sidebar nav li {
+        font-size: 18px;
+        padding: 20px 0;
+    }
+
+    .blogItem h2 {
+        font-size: 1.5rem;
+    }
+
+    .blogItem p {
+        font-size: 1.2rem;
+    }
 }
 
-article p {
-    line-height: 3;
-    color: #333333;
-}
-
-article li {
-    line-height: 2;
-}
-
-.back-btn {
-
-    margin-top: 34px;
-    padding: 9px 14px;
-    border-radius: 22px;
-    color: white;
-    background-color: rgb(41, 39, 39);
-    font-weight: bold;
-    width: 0 3px;
-    cursor: pointer;
-    margin: -1px;
-    border-color: black;
-}
-
-a.back-btn {
-    text-decoration: none;
-}
-
-/* .back-btn {
-    display: inline-block;
-    margin-top: 30px;
-    text-decoration: none;
-    background-color: #333;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 20px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-} */
-
-.back-btn:hover {
-    color: black;
-    background-color: white;
-    border: 2px solid #1e272e;
-}
-
+/* For screens up to 600px */
 @media (max-width: 600px) {
     article {
         margin: 20px;
@@ -479,99 +720,4 @@ a.back-btn {
     article h1 {
         font-size: 24px;
     }
-}
-
-/* about.css additions */
-h1 {
-    font-family: "Alumni Sans SC", sans-serif;
-    margin: 23px;
-}
-
-.intro {
-    margin: 88px;
-}
-
-.intro h2 {
-    font-family: "Michroma", sans-serif;
-    margin: 12px;
-}
-
-.intro p {
-    font-family: "Tektur", sans-serif;
-    margin: 12px;
-}
-
-@media (max-width: 1148px) {
-    * {
-        background-color: whitesmoke;
-    }
-
-    .sidebar {
-        transform: translate(-443px);
-        position: absolute;
-    }
-}
-
-.skillContainer {
-    padding: 12px;
-    font-family: "Alumni Sans SC", sans-serif;
-    margin: 88px;
-}
-
-.skillItem {
-    display: flex;
-    align-items: center;
-    font-family: "Tektur", sans-serif;
-
-}
-
-.skill {
-    width: 256px;
-    height: 6px;
-    background-color: black;
-    border: 2px solid black;
-
-
-}
-
-.expert {
-    width: 256px;
-    background-color: blue;
-
-}
-
-.intermediate {
-    width: 150px;
-    background-color: brown;
-}
-
-.easy {
-    width: 50;
-    background-color: red;
-}
-
-@media (max-width: 1148px) {
-    .intro {
-        margin: 50px 8px;
-    }
-}
-
-/* project.css additions */
-.videoContainer {
-    padding: 40px;
-    text-align: center;
-}
-
-.videos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.videos-grid iframe {
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

@@ -23,3 +23,17 @@ window.onload = () => {
         }
     });
 };
+
+  function showSection(type) {
+    const longSection = document.getElementById("longVideos");
+    const shortSection = document.getElementById("shortVideos");
+
+    if (type === "long") {
+      longSection.style.display = "block";
+      shortSection.style.display = "none";
+    } else {
+      longSection.style.display = "none";
+      shortSection.style.display = "block";
+    }
+  }
+

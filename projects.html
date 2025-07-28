@@ -1,57 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Mohaimin - Graphic Designer</title>
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects – Video Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="sidebar sidebarGo">
-            <nav>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/contact.html">Contact Me</a></li>
-                    <li><a href="/Projects.html">Projects</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="main">
-            <div class="hamburger">
-                <img class="ham" src="ham.png" alt="" width="45">
-                <img class="cross" src="cross.png" alt="" width="23">
-            </div>
-            <div class="videoContainer">
-    <div class="videoContainer">
-    <h1>Abdul Mohaimin - Projects</h1>
-
-    <div class="video-grid">
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/oHB5DG2KGSw" 
-            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/DhawSp2VFss" 
-            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/yrIvGycAq7c" 
-            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/mDShvXZWyBo" 
-            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  <div class="container">
+    
+    <!-- Sidebar -->
+    <div class="sidebar sidebarGo">
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/Projects.html">Projects</a></li>
+          <li><a href="/contact.html">Contact Me</a></li>
+          
+        </ul>
+      </nav>
     </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+      <!-- Hamburger Menu -->
+      <div class="hamburger">
+        <img class="ham" src="ham.png" alt="Menu" width="45">
+        <img class="cross" src="cross.png" alt="Close" width="23">
+      </div>
+
+      <!-- Topbar -->
+      <div class="topbar">
+        <h1>My Video Projects</h1>
+      </div>
+
+      <!-- Toggle Buttons -->
+      <div class="project-buttons">
+        <button onclick="showSection('long')">Long Videos</button>
+        <button onclick="showSection('short')">Short Videos</button>
+      </div>
+
+      <!-- Content Area -->
+      <div class="content">
+
+        <!-- Long Videos Section -->
+        <!-- Long Videos Section -->
+<div id="longVideos" class="videoContainer">
+  <h1>Long Videos</h1>
+  <div class="video-grid">
+    <iframe class="long-video" src="https://www.youtube.com/embed/mRDRcD9LC5I" allowfullscreen></iframe>
+    <iframe class="long-video" src="https://www.youtube.com/embed/oHB5DG2KGSw" allowfullscreen></iframe>
+    <iframe class="long-video" src="https://www.youtube.com/embed/DhawSp2VFss" allowfullscreen></iframe>
+    <iframe class="long-video" src="https://www.youtube.com/embed/yrIvGycAq7c" allowfullscreen></iframe>
+    <iframe class="long-video" src="https://www.youtube.com/embed/JkZg_KwD3oU" allowfullscreen></iframe>
+    <iframe class="long-video" src="https://www.youtube.com/embed/mDShvXZWyBo" allowfullscreen></iframe>
+    <iframe class="long-video" src="https://www.youtube.com/embed/Tf9y9Di2l5k" allowfullscreen></iframe>
+    <iframe class="long-video" src="https://www.youtube.com/embed/R1qy_zefpzc" allowfullscreen></iframe>
+    <iframe class="long-video" src="https://www.youtube.com/embed/wreOj0qJh-M" allowfullscreen></iframe>
+    <iframe class="long-video" src="https://www.youtube.com/embed/dIt6buH2Ln0" allowfullscreen></iframe>
+  </div>
 </div>
 
-    </div>
+<!-- Short Videos Section -->
+<div id="shortVideos" class="videoContainer" style="display:none;">
+  <h1>Short Videos</h1>
+  <div class="video-grid">
+    <iframe class="short-video" src="https://www.youtube.com/embed/r3TKZy0Ic0Y" allowfullscreen></iframe>
+    <iframe class="short-video" src="https://www.youtube.com/embed/ghCqFVEcCCM" allowfullscreen></iframe>
+    <iframe class="short-video" src="https://www.youtube.com/embed/Lc6d_vOKjok" allowfullscreen></iframe>
+    <iframe class="short-video" src="https://www.youtube.com/embed/1uCMkUX7CqM" allowfullscreen></iframe>
+    <iframe class="short-video" src="https://www.youtube.com/embed/-CX533Zh1EY" allowfullscreen></iframe>
+    <iframe class="short-video" src="https://www.youtube.com/embed/MHQ96NeFp18" allowfullscreen></iframe>
+    <iframe class="short-video" src="https://www.youtube.com/embed/JqehaR-4ZXc" allowfullscreen></iframe>
+    <iframe class="short-video" src="https://www.youtube.com/embed/ZFQBN9hlnJ4" allowfullscreen></iframe>
+    <iframe class="short-video" src="https://www.youtube.com/embed/xaQ4unMR51Y" allowfullscreen></iframe>
+    <iframe class="short-video" src="https://www.youtube.com/embed/7HwOTbzWyaM" allowfullscreen></iframe>
+  </div>
 </div>
 
-        </div>
-    </div>
-    <script src="script.js"></script>
+
+      </div> <!-- End of .content -->
+      
+    </div> <!-- End of .main -->
+  </div> <!-- End of .container -->
+<script src="script.js"></script>
+  <!-- JavaScript -->
+  <!-- <script>
+    function showSection(type) {
+      const longSection = document.getElementById("longVideos");
+      const shortSection = document.getElementById("shortVideos");
+
+      if (type === "long") {
+        longSection.style.display = "block";
+        shortSection.style.display = "none";
+      } else {
+        shortSection.style.display = "block";
+        longSection.style.display = "none";
+      }
+    }
+  </script> -->
 </body>
-
 </html>
